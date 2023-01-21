@@ -4,10 +4,10 @@ orbs:
 jobs:
   testing:
     docker:
-      - image: cimg/node:lts
+      - image: shehan97/server-test:latest
         auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
+          username: shehan97
+          password: dockershehan1234
     steps:
       - checkout
       - run:
@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Check deployment status
           command: |
-            heroku ps --app $HEROKU_APP_NAME
+            heroku ps --app server-test97
 workflows:
   heroku_deploy:
     jobs:
