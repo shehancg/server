@@ -54,7 +54,7 @@ const PORT = process.env.PORT || 4000;
 mongoose.set("strictQuery", false);
 mongoose.connect('mongodb+srv://ShehanAdmin:shehanadmin999@fullstackapp.mmqh54c.mongodb.net/FULLSTACKAPP').then(() => {
     console.log('DATABASE BADU WADA');
-    httpServer.listen(PORT, () => {
+    app.listen(PORT, () => {
         console.log('Server listening on port ${PORT}!');
         /* process.on('warning', (warning) => {
             console.log(warning.stack);
